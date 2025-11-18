@@ -1,0 +1,13 @@
+# first ignore everything
+*
+
+# gradle wrapper
+!gradlew
+!gradle/
+
+# build scripts
+!build.gradle
+!settings.gradle
+
+# source code
+!src/main/

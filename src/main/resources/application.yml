@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: webhook-interceptor
+
+replacer:
+  matcher: ${match.pattern:^.*(/Images/|/UserImage|/Branding/Splashscreen).*$}
+  replacement: ${replacement.string:image}
+  index: ${add.index:true}
+  prefix: ${replacement.prefix:attachment://}
+  suffix: ${replacement.suffix:.jpg}
+
+attacher:
+  url: ${webhook.url}
+  params: ${query.params:?format=Jpg}
